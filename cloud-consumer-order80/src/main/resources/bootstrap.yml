@@ -1,0 +1,30 @@
+server:
+  port: 80
+
+
+spring:
+  application:
+    name: consumer-order80
+    #所以你读取的文件名应该是   wangyafei-区域名（dev）.yaml 就是你项目的分区啊  那
+  cloud:
+    nacos:
+      discovery: #服务发现与注册
+        server-addr: localhost:8848 #服务注册中心地址
+      config:
+        server-addr: localhost:8848 #nacos作为配置中心地址  从哪拉取配置
+        file-extension: yaml  #延伸格式   配置文件的后缀
+        group: DEFAULT_GROUP  #分组
+        namespace: 3aa5cc3e-f382-402c-979b-ad0b225c476f  #命名空间  命名空间ID
+
+eureka:
+  client:
+    # 表示是否将自己注册进注册中心，默认为true
+    register-with-eureka: true
+    # 表示是否从EurekaServer抓取已有的注册信息，默认为true，单节点无所谓，集群必须为true，才能配合ribbon使用负载均衡
+    fetch-registry: true
+    #注册中心服务地址，你想把这个服务端注册到哪个注册中心，就写哪个注册中心地址，也可以主策到多个注册中心，中间用“，”隔开
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: order80 #为客户端设置id/主机名称
+    prefer-ip-address: true #访问路径可以显示Ip地址

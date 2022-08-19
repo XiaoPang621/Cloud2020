@@ -1,0 +1,10 @@
+# 项目排除路径
+/cloud-0rovider-payment8003/target/
+/cloud-api-commons/target/
+/cloud-consumer-order80/target/
+/cloud-consumerconsul-order80/target/
+/cloud-eureka-servcer7001/target/
+/cloud-eureka-server7002/target/
+/cloud-provider-payment8002/target/
+/cloud-providerconsul8006/target/
+/yafei-mybatis-spring-boot-starter/target/

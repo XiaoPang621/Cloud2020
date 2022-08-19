@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: nacos-client
+    #所以你读取的文件名应该是   wangyafei-区域名（dev）.yaml 就是你项目的分区啊  那
+  cloud:
+    nacos:
+      discovery: #服务发现与注册
+        server-addr: localhost:8848 #服务注册中心地址
+      config:
+        server-addr: localhost:8848 #nacos作为配置中心地址  从哪拉取配置
+        file-extension: yaml  #延伸格式   配置文件的后缀
+        group: DEFAULT_GROUP  #分组
+        namespace: 3aa5cc3e-f382-402c-979b-ad0b225c476f  #命名空间  命名空间ID
+
