@@ -1,7 +1,6 @@
 package com.baidu.springCloud.Test;
 
 import com.baidu.springCloud.entity.User;
-import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -44,6 +43,8 @@ public class Lamda {
      );
 
     public static void main(String[] args) {
+        String str="202209006804";
+        System.out.println(str.substring(2,str.length()));
        /* user.stream().filter((e)->3>2).forEach(System.out::println);*/
 
        //String sc= doubleToThousands(123456.32232332);

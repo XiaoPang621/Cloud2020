@@ -28,8 +28,7 @@ public class PayUserController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @ResponseBody
-    @PostMapping("/login.in")
+    @PostMapping ("/login.in")
     //@RequestBody 接收来自请求中json类型的参数
     public CommonResult<User> login(@RequestBody User user){
         CommonResult<User> s=new CommonResult<User>();
